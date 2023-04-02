@@ -12,70 +12,74 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-
-        .image-carousel {
+        .packages {
             display: flex;
-            overflow: hidden;
-            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .package {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .package h3 {
+            margin-top: 0;
+        }
+        .package img {
+            max-width: 100%;
+            height: auto;
+        }
+        .package p {
+             margin-top: 10px;
         }
 
-        .image-carousel-item {
-            flex-shrink: 0;
-            width: 25%;
-            height: 25%;
+        .package button {
+            margin-top: 10px;
         }
 
-            .image-carousel-item img {
-                width: 100%;
-                height: 25%;
-                object-fit: cover;
-            }
-            .packages {
-                display: flex;
-                justify-content: space-between;
-            }
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none; /* ascunde bara de derulare implicită */
+            -ms-overflow-style: none; /* ascunde bara de derulare implicită pe IE 10+ */
+        }
+        .image-container::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* ascunde bara de derulare pe Webkit */
+        }
+        .filters {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
 
-            .package {
-                flex-basis: 30%;
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-                padding: 10px;
-            }
+        .filters select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f2f2f2;
+            margin-right: 10px;
+        }
 
-            .package img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-            }
-            .filters {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 20px;
-            }
+        .filters button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
 
-            .filters select {
-                padding: 10px;
-                border-radius: 5px;
-                border: none;
-                background-color: #f2f2f2;
-                margin-right: 10px;
-            }
-
-            .filters button {
-                padding: 10px 20px;
-                border-radius: 5px;
-                 border: none;
-                 background-color: #007bff;
-                 color: #fff;
-                cursor: pointer;
-            }
-
-            .filters button:hover {
-                background-color: #0062cc;
-            }
+        .filters button:hover {
+            background-color: #0062cc;
+        }
+        .select-custom {
+            font-size: 20px;
+        }
     </style>
 </head>
+
 <body>
     <header>
 
@@ -103,36 +107,42 @@
         <div class="container">
             <h2 class="page-heading">Pachete turistice disponibile</h2>
             <div class="filters">
-                <select>
-                    <option>Destinație</option>
-                    <option value="1">Spania</option>
-                    <option value="2">Italia</option>
-                    <option value="3">Franța</option>
-                </select>
-                <select>
-                    <option>Preț</option>
-                    <option value="1">500-1000 RON</option>
-                    <option value="2">1000-2000 RON</option>
-                    <option value="3">2000-3000 RON</option>
-                </select>
-                <button>Filtrează</button>
+                <form>
+                    <input type="text" placeholder="Destinatie">
+                    <input type="text" placeholder="Pret">
+                    <button type="submit">Filtreaza</button>
+                </form>
             </div>
             <div class="packages">
                 <div class="package">
                     <h3>Spania</h3>
-                    <img src="https://picsum.photos/300/200" alt="Spain package image">
+                <div class = "image-container">
+                    <img src="images/Spania/2.jpg" alt="Spain package image">
+                </div>
                     <p>Preț: 1200 RON</p>
                     <button>Adaugă în coș</button>
                 </div>
                 <div class="package">
                     <h3>Italia</h3>
-                    <img src="https://picsum.photos/300/200" alt="Italy package image">
+                <div class = "image-container">
+                    <img src="images/Italia/1.jpg" alt="Italia package image">
+                </div>
                     <p>Preț: 1800 RON</p>
                     <button>Adaugă în coș</button>
                 </div>
                 <div class="package">
                     <h3>Franța</h3>
-                    <img src="https://picsum.photos/300/200" alt="France package image">
+                <div class = "image-container">
+                    <img src="images/Franta/1.jpg" alt="Franta package image">
+                </div>
+                    <p>Preț: 2400 RON</p>
+                    <button>Adaugă în coș</button>
+                </div>
+                <div class="package">
+                    <h3>Egipt</h3>
+                <div class = "image-container">
+                    <img src="images/Egipt/1.jpg" alt="Egipt package image">
+                </div>
                     <p>Preț: 2400 RON</p>
                     <button>Adaugă în coș</button>
                 </div>
