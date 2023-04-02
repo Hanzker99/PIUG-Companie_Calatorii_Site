@@ -1,3 +1,25 @@
+<?php
+	session_start();
+
+	// verifica daca cosul de cumparaturi exista deja in sesiune
+	if (!isset($_SESSION['cos'])) {
+		$_SESSION['cos'] = array();
+	}
+
+	// proceseaza actualizarile de cantitate si eliminarea produselor
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		foreach ($_POST['cantitati'] as $index => $cantitate) {
+			if ($cantitate <= 0) {
+				unset($_SESSION['cos'][$index]);
+			} else {
+				$_SESSION['cos'][$index]['cantitate'] = $cantitate;
+			}
+		}
+		$_SESSION['cos'] = array_values($_SESSION['cos']);
+	}
+
+	$total = 0;
+?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
