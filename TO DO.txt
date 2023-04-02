@@ -3,7 +3,7 @@ Trebuie modificat fiecare package cu asta
 <div class="pachet-turistic">
 	    <h2>Nume pachet turistic</h2>
     <div class = "image-container">
-        <img src="images/Italia/1.jpg" alt="Italia package image">
+        <img src="images/Italia/1.jpg" alt="Italia package image">   // Fiecare folder prentru fiecare tara
     </div>
 	    <p>Descriere pachet turistic</p>
 	    <p>Preț: X RON</p>
@@ -14,3 +14,9 @@ Trebuie modificat fiecare package cu asta
 		    <button type="submit">Adaugă în coș</button>
 	</form>
 </div>
+
+
+
+
+
+Modificata pagina de cos de cumparaturi
