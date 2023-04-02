@@ -139,11 +139,17 @@
             <div class="packages">
                 <div class="package">
                     <h3>Spania</h3>
-                <div class = "image-container">
-                    <img src="images/Spania/2.jpg" alt="Spain package image">
-                </div>
-                    <p>Preț: 1200 RON</p>
-                    <button class="adauga-in-cos">Adauga in cos</button>
+                    <div class = "image-container">
+                        <img src="images/Italia/1.jpg" alt="Italia package image">
+                    </div>
+                    <p>Descriere pachet turistic</p>
+                    <p>Preț: 1200 Euro</p>
+                    <form action="cos.php" method="post">
+                        <input type="hidden" name="nume" value="Nume pachet turistic">
+                        <input type="hidden" name="pret" value="X">
+                        <input type="number" name="cantitate" value="1" min="1">
+                        <button type="submit">Adaugă în coș</button>
+                    </form>
                 </div>
                 <div class="package">
                     <h3>Italia</h3>
