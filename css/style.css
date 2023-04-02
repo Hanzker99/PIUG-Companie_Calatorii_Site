@@ -1,0 +1,266 @@
+﻿/* Variabilele CSS */
+
+:root {
+    --primary-color: #008080;
+    --secondary-color: none;
+}
+
+/* Stilurile generale */
+body {
+    background-image: linear-gradient(to right, #ABB2B9, #00DFFE);
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Stiluri pentru bara de navigare */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: black;
+    padding: 0px 0px;
+    font-weight: bold;
+}
+
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: -100px;
+    line-height: 100px;
+    margin-top: -250px;
+}
+
+
+
+.navbar-link {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0s ease-in-out;
+}
+
+    .navbar-link:hover {
+        background-color: var(--primary-color);
+    }
+
+.active {
+    background-color: var(--primary-color);
+}
+
+/* Stiluri pentru antet */
+.hero {
+    height: 300px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+    .hero h1 {
+        animation: slide-in 1s ease-in-out;
+    }
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    margin-bottom: -150px;
+}
+
+.hero {
+    margin-top: -250px;
+}
+
+
+
+
+    .hero h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 1000px;
+        margin-bottom: 30px;
+    }
+
+.button {
+    text-decoration: none;
+    color: black;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0s ease-in-out;
+}
+
+    .button:hover {
+        background-color: #008080;
+    }
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+    .footer-links a {
+        color: #008080;
+        text-decoration: none;
+    }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+.navbar-logo img { /*LOGO*/
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Stilurile pentru rețelele de socializare */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .social-icons a {
+        display: inline-block;
+        margin: 15px 15px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+
+/* Carousel*/
+.carousel-caption {
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.image-carousel-item {
+    flex-shrink: 0;
+    width: 50%;
+    height: 20%;
+}
+
+    .image-carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+.carousel {
+    position: center;
+    width: 100%;
+    height: 100px;
+}
+
+.slide {
+    position: center;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover   ;
+    }
+
+#help-button {
+    position: unset;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#up-button,
+#down-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#up-button {
+    right: 100px;
+}
+
+#down-button {
+    right: 20px;
+}
+
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>B&MTravel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_pachete.css">
+    <style>
+
+        body {
+            background-image: url('images/pexels-simon-berger-1323550.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image-carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .image-carousel-item {
+            flex-shrink: 0;
+            width: 25%;
+            height: 25%;
+        }
+
+            .image-carousel-item img {
+                width: 100%;
+                height: 25%;
+                object-fit: cover;
+            }
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo">
+                <img src="images/logo_transparent.png" alt="B&MTravel">
+            </a>
+            <ul class="navbar-list">
+                <li><a href="index.html" class="navbar-link">Acasă</a></li>
+                <li><a href="pachete_turistice.html" class="navbar-link">Pachete Turistice</a></li>
+                <li><a href="cos.html" class="navbar-link">Coș</a></li>
+                <li><a href="contact.html" class="navbar-link active">Contact</a></li>
+                <li><a href="cautare.html" class="navbar-link">Căutare</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Descoperă lumea alături de noi!</h1>
+            <p>Alege din cele mai bune pachete turistice și bucură-te de aventura vieții tale!</p>
+            
+        </div>
+
+
+    </header>
+
+    <h1>Contactați-ne</h1>
+    <p>Pentru orice întrebare sau nelămurire, ne puteți contacta folosind următoarele metode:</p>
+    <ul>
+        <li>Email: <a href="mailto:contact@companiadecalatorii.ro">contact@companiadecalatorii.ro</a></li>
+        <li>Telefon: 021 123 4567</li>
+        <li>Adresă: Str. Exemplu nr. 1, București</li>
+    </ul>
+    <form id="myForm" action="submit.php" method="post">
+        <label for="name">Nume:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mesaj:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" id="submitBtn">Trimite</button>
+
+        <div id="statusMsg"></div>
+    </form>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="images/logo_facebook.png" alt="Facebook" width="50"></a>
+            <a href="#"><img src="images/logo_twiter.png" alt="Twitter" width="50"></a>
+            <a href="#"><img src="images/logo_instagram.png" alt="Instagram" width="50"></a>
+        </div>
+        <div class="footer-info">
+            <p>Adresă: Strada ### nr. ###, Timisoara, România</p>
+            <p>Telefon: +40 123 456 789</p>
+            <p>Email: contact@m&btravel.ro</p>
+            <p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
+        </div>
+    </footer>
+    </main>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            }).then(function (response) {
+                if (response.ok) {
+                    document.getElementById("statusMsg").textContent = "Mesajul a fost trimis cu succes!";
+                    form.reset();
+                } else {
+                    throw new Error("A apărut o eroare la trimiterea mesajului.");
+                }
+            }).catch(function (error) {
+                document.getElementById("statusMsg").textContent = error.message;
+            });
+        });
+    </script>
+</body>
+</html>

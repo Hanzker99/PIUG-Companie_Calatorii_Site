@@ -1,0 +1,79 @@
+/* Stiluri pentru sectiunea Pachete Turistice */
+.packages {
+  padding: 80px 0;
+}
+
+.packages h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.packages .packages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.packages .package {
+  width: calc(33.33% - 60px);
+  margin: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.packages .package:hover {
+  transform: translateY(-10px);
+}
+
+.packages .package img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.packages .package h3 {
+  font-size: 24px;
+  padding: 20px;
+  margin: 0;
+}
+
+.packages .package p {
+  padding: 20px;
+  margin: 0;
+}
+
+    .packages .package .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        background-color: #008080;
+        border: none;
+        border-radius: 0;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+.packages .package .button:hover {
+  background-color: #2980b9;
+}
+
+.packages .package .add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.packages .package .add-to-cart:hover {
+  background-color: #27ae60;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<title>B&MTravel</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_pachete.css">
+	<style>
+
+        body {
+            background-image: url('images/pexels-simon-berger-1323550.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+		.image-carousel {
+			display: flex;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.image-carousel-item {
+			flex-shrink: 0;
+			width: 25%;
+			height: 25%;
+		}
+
+			.image-carousel-item img {
+				width: 100%;
+				height: 25%;
+				object-fit: cover;
+			}
+	</style>
+</head>
+<body>
+	<header>
+
+		<nav class="navbar">
+			<a href="index.html" class="navbar-logo">
+				<img src="images/logo_transparent.png" alt="B&MTravel">
+			</a>
+			<ul class="navbar-list">
+				<li><a href="index.html" class="navbar-link active">Acasă</a></li>
+				<li><a href="pachete_turistice.html" class="navbar-link">Pachete Turistice</a></li>
+				<li><a href="cos.html" class="navbar-link">Coș</a></li>
+				<li><a href="contact.html" class="navbar-link">Contact</a></li>
+				<li><a href="cautare.html" class="navbar-link">Căutare</a></li>
+			</ul>
+		</nav>
+
+		<div class="hero">
+			<h1>Descoperă lumea alături de noi!</h1>
+			<p>Alege din cele mai bune pachete turistice și bucură-te de aventura vieții tale!</p>
+			<a href="pachete_turistice.html" class="button">Vezi Pachetele Turistice</a>
+		</div>
+
+
+	</header>
+	<main>
+		<div class="image-carousel">
+			<div class="image-carousel-item">
+				<img src="images/france.jpg" alt="Image 1">
+				<h2>Franta</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/spain.jpg" alt="Image 2">
+				<h2>Spania</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/italy.jpg" alt="Image 3">
+				<h2>Italia</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/greece.jpg" alt="Image 4">
+				<h2>Grecia</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/austria.jpg" alt="Image 5">
+				<h2>Austria</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/new_zeland.jpg" alt="Image 6">
+				<h2>Noua Zeelanda</h2>
+			</div>
+			<div class="image-carousel-item">
+				<img src="images/egipt.jpg" alt="Image 7">
+				<h2>Egipt</h2>
+			</div>
+			</div>
+
+
+
+			<section class="packages">
+				<div class="container">
+					<h2>Pachete Turistice Populare</h2>
+					<div class="packages-list">
+						<div class="package">
+							<img src="images/offer_5.jpg" alt="Pachet turistic">
+							<h3>Nume Pachet Turistic</h3>
+							<p>Descriere pachet turistic. Adauga descriere</p>
+							<a href="pachete_turistice.html" class="button">Detalii</a>
+
+							<a href="cos.html" class="button">Adauga in cos</></a>
+						</div>
+						<div class="package">
+							<img src="images/offer_6.jpg" alt="Pachet turistic">
+							<h3>Nume Pachet Turistic</h3>
+							<p>Descriere pachet turistic. Adauga descriere</p>
+							<a href="pachete_turistice.html" class="button">Detalii</a>
+
+							<a href="cos.html" class="button">Adauga in cos</></a>
+
+						</div>
+						<div class="package">
+							<img src="images/offer_7.jpg" alt="Pachet turistic">
+							<h3>Nume Pachet Turistic</h3>
+							<p>Descriere pachet turistic. Adauga descriere</p>
+							<a href="pachete_turistice.html" class="button">Detalii</a>
+
+							<a href="cos.html" class="button">Adauga in cos</></a>
+						</div>
+						<button id="help-button">Help</button>
+						<button id="up-button">Up</button>
+						<button id="down-button">Down</button>
+
+
+
+
+
+						<footer>
+							<div class="social-icons">
+								<a href="#"><img src="images/logo_facebook.png" alt="Facebook" width="50"></a>
+								<a href="#"><img src="images/logo_twiter.png" alt="Twitter" width="50"></a>
+								<a href="#"><img src="images/logo_instagram.png" alt="Instagram" width="50"></a>
+							</div>
+
+							<div class="footer-info">
+								<p>Adresă: Strada ### nr. ###, Timisoara, România</p>
+								<p>Telefon: +40 123 456 789</p>
+								<p>Email: contact@m&btravel.ro</p>
+								<p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
+							</div>
+						</footer>
+
+
+					</div>
+				</div>
+			</section>
+</main>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function () {
+		setInterval(function () {
+			var currentMarginLeft = $('.image-carousel-item:first-child').css('margin-left');
+			var newMarginLeft = parseInt(currentMarginLeft) - $('.image-carousel-item:first-child').outerWidth(true);
+			$('.image-carousel-item:first-child').animate({ 'margin-left': newMarginLeft }, 500, function () {
+				$('.image-carousel-item:first-child').appendTo('.image-carousel').css('margin-left', 0);
+			});
+		}, 3000);
+	});
+</script>
+<script>
+	function scrollToTop() {
+		window.scrollTo(0, 0);
+	}
+
+	function scrollToBottom() {
+		window.scrollTo(0, document.body.scrollHeight);
+	}
+
+</script>
+<script>
+    const upButton = document.querySelector('#up-button');
+    const downButton = document.querySelector('#down-button');
+
+    upButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    downButton.addEventListener('click', function () {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+
+</script>
+
