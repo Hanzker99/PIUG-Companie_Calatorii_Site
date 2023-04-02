@@ -1,3 +1,26 @@
+<script>
+    // Defineste un obiect global pentru a tine evidenta cosului de cumparaturi
+    var cosCumparaturi = {
+      produse: [],
+      total: 0
+    };
+  
+    // Adauga un eveniment "click" pentru fiecare buton "Adauga in cos"
+    var butoaneCos = document.querySelectorAll('.adauga-in-cos');
+    for (var i = 0; i < butoaneCos.length; i++) {
+      butoaneCos[i].addEventListener('click', function() {
+        // Identifica pachetul turistic corespunzator utilizand identificatorul butonului
+        var idPachet = this.id;
+  
+        // Adauga pachetul turistic in cosul de cumparaturi
+        cosCumparaturi.produse.push(idPachet);
+  
+        // Actualizeaza numarul total de elemente din cos
+        var numarElemente = cosCumparaturi.produse.length;
+        document.getElementById('numar-elemente-cos').innerHTML = numarElemente;
+      });
+    }
+  </script>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -120,7 +143,7 @@
                     <img src="images/Spania/2.jpg" alt="Spain package image">
                 </div>
                     <p>Preț: 1200 RON</p>
-                    <button>Adaugă în coș</button>
+                    <button class="adauga-in-cos">Adauga in cos</button>
                 </div>
                 <div class="package">
                     <h3>Italia</h3>
@@ -128,7 +151,7 @@
                     <img src="images/Italia/1.jpg" alt="Italia package image">
                 </div>
                     <p>Preț: 1800 RON</p>
-                    <button>Adaugă în coș</button>
+                    <button class="adauga-in-cos">Adauga in cos</button>
                 </div>
                 <div class="package">
                     <h3>Franța</h3>
@@ -136,7 +159,7 @@
                     <img src="images/Franta/1.jpg" alt="Franta package image">
                 </div>
                     <p>Preț: 2400 RON</p>
-                    <button>Adaugă în coș</button>
+                    <button class="adauga-in-cos">Adauga in cos</button>
                 </div>
                 <div class="package">
                     <h3>Egipt</h3>
@@ -144,7 +167,7 @@
                     <img src="images/Egipt/1.jpg" alt="Egipt package image">
                 </div>
                     <p>Preț: 2400 RON</p>
-                    <button>Adaugă în coș</button>
+                    <button class="adauga-in-cos">Adauga in cos</button>
                 </div>
             </div>
         </div>
