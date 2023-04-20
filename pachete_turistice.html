@@ -1,25 +1,38 @@
 <script>
-    // Defineste un obiect global pentru a tine evidenta cosului de cumparaturi
-    var cosCumparaturi = {
-      produse: [],
-      total: 0
-    };
-  
-    // Adauga un eveniment "click" pentru fiecare buton "Adauga in cos"
-    var butoaneCos = document.querySelectorAll('.adauga-in-cos');
-    for (var i = 0; i < butoaneCos.length; i++) {
-      butoaneCos[i].addEventListener('click', function() {
-        // Identifica pachetul turistic corespunzator utilizand identificatorul butonului
-        var idPachet = this.id;
-  
-        // Adauga pachetul turistic in cosul de cumparaturi
-        cosCumparaturi.produse.push(idPachet);
-  
-        // Actualizeaza numarul total de elemente din cos
-        var numarElemente = cosCumparaturi.produse.length;
-        document.getElementById('numar-elemente-cos').innerHTML = numarElemente;
+    // obținem toate butoanele "Adauga in cos"
+var adaugaInCosButtons = document.querySelectorAll(".adauga-in-cos");
+
+// adăugăm un event listener pentru fiecare buton "Adauga in cos"
+adaugaInCosButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // obținem informațiile despre produs
+    var numeProdus = this.parentNode.querySelector("h3").textContent;
+    var pretProdus = this.parentNode.querySelector("p").textContent.split(":")[1].trim();
+    var cantitateProdus = this.parentNode.querySelector("input[name=cantitate]").value;
+
+    // verificăm dacă produsul este deja în coș
+    var produsExistent = false;
+    var cos = JSON.parse(localStorage.getItem("cos") || "[]");
+    cos.forEach(function(produs) {
+      if (produs.nume === numeProdus) {
+        produs.cantitate += parseInt(cantitateProdus);
+        produsExistent = true;
+      }
+    });
+
+    // dacă produsul nu este în coș, îl adăugăm
+    if (!produsExistent) {
+      cos.push({
+        nume: numeProdus,
+        pret: pretProdus,
+        cantitate: parseInt(cantitateProdus)
       });
     }
+
+    // actualizăm coșul din local storage
+    localStorage.setItem("cos", JSON.stringify(cos));
+  });
+});
   </script>
 <!DOCTYPE html>
 <html lang="ro">
