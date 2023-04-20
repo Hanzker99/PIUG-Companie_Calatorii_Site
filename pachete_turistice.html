@@ -132,44 +132,49 @@
     </header>
     <main>
         <div class="container">
-            <h2 class="page-heading">Pachete turistice disponibile</h2>
-            <div class="filters">
-                <form>
-                    <input type="text" placeholder="Destinatie">
-                    <input type="text" placeholder="Pret">
-                    <button type="submit">Filtreaza</button>
-                </form>
-            </div>
+            <h2>Destinații populare</h2>
             <div class="packages">
                 <div class="package">
                     <h3>Spania</h3>
-                    <div class = "image-container">
-                        <img src="images/Spania/1.jpg" alt="Italia package image">
+                    <div class="image-container">
+                        <img src="images/Spania/1.jpg" alt="Spania package image">
                     </div>
                     <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
                     <p>Preț: 1200 Lei</p>
                     <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Nume pachet turistic">
-                        <input type="hidden" name="pret" value="X">
+                        <input type="hidden" name="nume" value="Pachet turistic Spania">
+                        <input type="hidden" name="pret" value="1200">
                         <input type="number" name="cantitate" value="1" min="1">
                         <button type="submit">Adaugă în coș</button>
                     </form>
                 </div>
                 <div class="package">
                     <h3>Italia</h3>
-                <div class = "image-container">
-                    <img src="images/Italia/1.jpg" alt="Italia package image">
-                </div>
+                    <div class="image-container">
+                        <img src="images/Italia/1.jpg" alt="Italia package image">
+                    </div>
+                    <p>Descoperă farmecul Italiei într-un tur de 7 zile. Vizitează Roma, Veneția și Florența și bucură-te de gastronomia italiană.</p>
                     <p>Preț: 1800 RON</p>
-                    <button class="adauga-in-cos">Adauga in cos</button>
+                    <form action="cos.php" method="post">
+                        <input type="hidden" name="nume" value="Pachet turistic Italia">
+                        <input type="hidden" name="pret" value="1800">
+                        <input type="number" name="cantitate" value="1" min="1">
+                        <button type="submit">Adaugă în coș</button>
+                    </form>
                 </div>
                 <div class="package">
                     <h3>Franța</h3>
-                <div class = "image-container">
-                    <img src="images/Franta/1.jpg" alt="Franta package image">
-                </div>
+                    <div class="image-container">
+                        <img src="images/Franta/1.jpg" alt="Franta package image">
+                    </div>
+                    <p>Vizitează romantica Paris și regiunea sa, descoperă castelele din Valea Loarei și bucură-te de vinul și gastronomia franceză într-un tur de 10 zile.</p>
                     <p>Preț: 2400 RON</p>
-                    <button class="adauga-in-cos">Adauga in cos</button>
+                    <form action="cos.php" method="post">
+                        <input type="hidden" name="nume" value="Pachet turistic Franța">
+                        <input type="hidden" name="pret" value="2400">
+                        <input type="number" name="cantitate" value="1" min="1">
+                        <button type="submit">Adaugă în coș</button>
+                    </form>
                 </div>
                 <div class="package">
                     <h3>Egipt</h3>
