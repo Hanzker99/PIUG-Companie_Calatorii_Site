@@ -79,13 +79,7 @@
         }
     </style>
 </head>
-<div class="cos-cumparaturi">
-    <a href="cos.html"><img src="images/icon_cart.png" alt="Cos cumparaturi"></a>
-    <span id="numar-elemente-cos">0</span>
-  </div>
-
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <header>
 
         <nav class="navbar">
@@ -105,42 +99,6 @@
             <h1>Descoperă lumea alături de noi!</h1>
             <p>Alege din cele mai bune pachete turistice și bucură-te de aventura vieții tale!</p>
         </div>
-        <script>
-            // obținem toate butoanele "Adauga in cos"
-        var adaugaInCosButtons = document.querySelectorAll(".adauga-in-cos");
-        
-        // adăugăm un event listener pentru fiecare buton "Adauga in cos"
-        adaugaInCosButtons.forEach(function(button) {
-          button.addEventListener("click", function() {
-            // obținem informațiile despre produs
-            var numeProdus = this.parentNode.querySelector("h3").textContent;
-            var pretProdus = this.parentNode.querySelector("p").textContent.split(":")[1].trim();
-            var cantitateProdus = this.parentNode.querySelector("input[name=cantitate]").value;
-        
-            // verificăm dacă produsul este deja în coș
-            var produsExistent = false;
-            var cos = JSON.parse(localStorage.getItem("cos") || "[]");
-            cos.forEach(function(produs) {
-              if (produs.nume === numeProdus) {
-                produs.cantitate += parseInt(cantitateProdus);
-                produsExistent = true;
-              }
-            });
-        
-            // dacă produsul nu este în coș, îl adăugăm
-            if (!produsExistent) {
-              cos.push({
-                nume: numeProdus,
-                pret: pretProdus,
-                cantitate: parseInt(cantitateProdus)
-              });
-            }
-        
-            // actualizăm coșul din local storage
-            localStorage.setItem("cos", JSON.stringify(cos));
-          });
-        });
-          </script>
     </body>
     </header>
     <main>
