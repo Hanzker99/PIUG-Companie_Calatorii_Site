@@ -12,39 +12,29 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .package {
+        .packages {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        .package .image-container {
-            width: 100%;
+        .package {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .package h3 {
+            margin-top: 0;
         }
         .package img {
             max-width: 100%;
             height: auto;
         }
         .package p {
-            margin-top: 10px;
+             margin-top: 10px;
         }
-        .package h3, .package p {
-            margin: 0;
-        }
-        .package form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .package form input[type="number"] {
-             width: 60px;
-            margin-right: 10px;
-        }
+
         .package button {
             margin-top: 10px;
-            text-align: center;
         }
 
         .image-container {
@@ -87,9 +77,6 @@
         .select-custom {
             font-size: 20px;
         }
-        .Text {
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -115,9 +102,8 @@
     </body>
     </header>
     <main>
-        <div class="Text"</div>
-        <h2>Destinații populare</h2>
         <div class="container">
+            <h2>Destinații populare</h2>
             <div class="packages">
                 <div class="package">
                     <h3>Spania</h3>
@@ -125,7 +111,7 @@
                         <img src="images/Spania/1.jpg" alt="Spania package image">
                     </div>
                     <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
-                    <p>Preț: 1200 Euro</p>
+                    <p>Preț: 1200 Lei</p>
                     <form action="cos.php" method="post">
                         <input type="hidden" name="nume" value="Pachet turistic Spania">
                         <input type="hidden" name="pret" value="1200">
@@ -133,54 +119,57 @@
                         <button type="submit">Adaugă în coș</button>
                     </form>
                 </div>
+                <div class="packages">
+                    <div class="package">
+                        <h3>Grecia</h3>
+                        <div class="image-container">
+                            <img src="images/Grecia/1.jpg" alt="Spania package image">
+                        </div>
+                        <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
+                        <p>Preț: 1200 Lei</p>
+                        <form action="cos.php" method="post">
+                            <input type="hidden" name="nume" value="Pachet turistic Spania">
+                            <input type="hidden" name="pret" value="1200">
+                            <input type="number" name="cantitate" value="1" min="1">
+                            <button type="submit">Adaugă în coș</button>
+                        </form>
+                    </div>
+                    <div class="packages">
+                        <div class="package">
+                            <h3>Austria</h3>
+                            <div class="image-container">
+                                <img src="images/Austria/1.jpg" alt="Spania package image">
+                            </div>
+                            <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
+                            <p>Preț: 1200 Lei</p>
+                            <form action="cos.php" method="post">
+                                <input type="hidden" name="nume" value="Pachet turistic Spania">
+                                <input type="hidden" name="pret" value="1200">
+                                <input type="number" name="cantitate" value="1" min="1">
+                                <button type="submit">Adaugă în coș</button>
+                            </form>
+                        </div>
+                        <div class="packages">
+                            <div class="package">
+                                <h3>Spania</h3>
+                                <div class="image-container">
+                                    <img src="images/Spania/1.jpg" alt="Spania package image">
+                                </div>
+                                <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
+                                <p>Preț: 1200 Lei</p>
+                                <form action="cos.php" method="post">
+                                    <input type="hidden" name="nume" value="Pachet turistic Spania">
+                                    <input type="hidden" name="pret" value="1200">
+                                    <input type="number" name="cantitate" value="1" min="1">
+                                    <button type="submit">Adaugă în coș</button>
+                                </form>
+                            </div>
                 <div class="package">
                     <h3>Italia</h3>
                     <div class="image-container">
                         <img src="images/Italia/1.jpg" alt="Italia package image">
                     </div>
                     <p>Descoperă farmecul Italiei într-un tur de 7 zile. Vizitează Roma, Veneția și Florența și bucură-te de gastronomia italiană.</p>
-                    <p>Preț: 1800 Euro</p>
-                    <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Pachet turistic Italia">
-                        <input type="hidden" name="pret" value="1800">
-                        <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
-                    </form>
-                </div>
-                <div class="package">
-                    <h3>Noua Zeelanda</h3>
-                    <div class="image-container">
-                        <img src="images/NouaZeelanda/1.jpg" alt="Italia package image">
-                    </div>
-                    <p>Noua Zeelandă este o țară insulară situată în sud-vestul Oceanului Pacific. Este alcătuită din două insule principale, Insula de Nord și Insula de Sud, și numeroase insule mai mici. Noua Zeelandă are o istorie bogată și diversă, iar populația sa este formată din mai multe grupuri etnice, inclusiv maori, europeni și insulari din Pacific.</p>
-                    <p>Preț: 1800 Euro</p>
-                    <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Pachet turistic Italia">
-                        <input type="hidden" name="pret" value="1800">
-                        <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
-                    </form>
-                </div>
-                <div class="package">
-                    <h3>Grecia</h3>
-                    <div class="image-container">
-                        <img src="images/Grecia/1.jpg" alt="Italia package image">
-                    </div>
-                    <p>Pachetul turistic pentru Grecia este conceput astfel încât să vă permită să vă bucurați de o experiență autentică și inedită în această destinație fermecătoare. Pachetul include cazare confortabilă, transport local, bilete de avion, precum și activități culturale și de agrement.</p>
-                    <p>Preț: 1800 Euro</p>
-                    <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Pachet turistic Italia">
-                        <input type="hidden" name="pret" value="1800">
-                        <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
-                    </form>
-                </div>
-                <div class="package">
-                    <h3>Austria</h3>
-                    <div class="image-container">
-                        <img src="images/Austria/1.jpg" alt="Italia package image">
-                    </div>
-                    <p> Austria este o destinație turistică populară din Europa, situată în inima continentului, cunoscută pentru peisajele sale alpine spectaculoase, arhitectura barocă și istoria bogată. Această țară vibrantă are multe de oferit, de la castele medievale și palate luxoase la muzee fascinante, pârtii de schi și evenimente culturale.</p>
                     <p>Preț: 1800 Euro</p>
                     <form action="cos.php" method="post">
                         <input type="hidden" name="nume" value="Pachet turistic Italia">
@@ -235,4 +224,3 @@
         </div>
     </footer>
 </html>
-
