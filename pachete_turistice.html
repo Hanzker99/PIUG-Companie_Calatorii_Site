@@ -16,11 +16,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
         .package {
             width: 300px;
+            height: 400px;
+            background-color: #f2f2f2;
             padding: 20px;
-            border: 1px solid #ccc;
+            text-align: center;
         }
         .package h3 {
             margin-top: 0;
@@ -34,7 +37,13 @@
         }
 
         .package button {
-            margin-top: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer
         }
 
         .image-container {
@@ -116,7 +125,7 @@
                         <input type="hidden" name="nume" value="Pachet turistic Spania">
                         <input type="hidden" name="pret" value="1200">
                         <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
+                        <button>Adaugă în coș</button>
                     </form>
                 </div>
                 <div class="package">
