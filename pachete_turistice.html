@@ -16,10 +16,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
+            justify-content: space-between;
         }
         .package {
-            width: 300px;
+            width: calc(33.33% - 20px);
             height: 400px;
             background-color: #f2f2f2;
             padding: 20px;
@@ -38,6 +38,7 @@
 
         .package button {
             margin-top: 10px;
+            display: block;
         }
 
         .image-container {
@@ -224,3 +225,4 @@
         </div>
     </footer>
 </html>
+
