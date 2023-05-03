@@ -1,114 +1,144 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>B&MTravel</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_pachete.css">
-    <style>
+<meta charset="UTF-8">
+<title>B&MTravel</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_pachete.css">
+<style>
 
-        body {
-            background-image: url('images/pexels-simon-berger-1323550.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .packages {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .package {
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-        .package h3 {
-            margin-top: 0;
-        }
-        .package img {
-            max-width: 100%;
-            height: auto;
-        }
-        .package p {
-             margin-top: 10px;
-        }
-
-        .package button {
+    body {
+        background-image: url('images/pexels-simon-berger-1323550.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .packages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .package {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    .package h3 {
+        margin-top: 0;
+    }
+    .package img {
+        max-width: 100%;
+        height: auto;
+    }
+    .package p {
             margin-top: 10px;
-        }
+    }
 
-        .image-container {
-            display: flex;
-            overflow-x: auto;
-            scrollbar-width: none; /* ascunde bara de derulare implicită */
-            -ms-overflow-style: none; /* ascunde bara de derulare implicită pe IE 10+ */
-        }
-        .image-container::-webkit-scrollbar {
-            width: 0px;
-            background: transparent; /* ascunde bara de derulare pe Webkit */
-        }
-        .filters {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+    .package button {
+        margin-top: 10px;
+    }
 
-        .filters select {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #f2f2f2;
-            margin-right: 10px;
-        }
+    .image-container {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none; /* ascunde bara de derulare implicită */
+        -ms-overflow-style: none; /* ascunde bara de derulare implicită pe IE 10+ */
+    }
+    .image-container::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* ascunde bara de derulare pe Webkit */
+    }
+    .filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 
-        .filters button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
+    .filters select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        margin-right: 10px;
+    }
 
-        .filters button:hover {
-            background-color: #0062cc;
-        }
-        .select-custom {
-            font-size: 20px;
-        }
-    </style>
+    .filters button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .filters button:hover {
+        background-color: #0062cc;
+    }
+    .select-custom {
+        font-size: 20px;
+    }
+</style>
 </head>
 <body>
-    <header>
+<header>
 
-        <nav class="navbar">
-            <a href="index.html" class="navbar-logo">
-                <img src="images/logo_transparent.png" alt="B&MTravel">
-            </a>
-            <ul class="navbar-list">
-                <li><a href="index.html" class="navbar-link">Acasă</a></li>
-                <li><a href="pachete_turistice.html" class="navbar-link active">Pachete Turistice</a></li>
-                <li><a href="cos.html" class="navbar-link">Coș</a></li>
-                <li><a href="contact.html" class="navbar-link">Contact</a></li>
-                <li><a href="cautare.html" class="navbar-link">Căutare</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="images/logo_transparent.png" alt="B&MTravel">
+        </a>
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Acasă</a></li>
+            <li><a href="pachete_turistice.html" class="navbar-link active">Pachete Turistice</a></li>
+            <li><a href="cos.html" class="navbar-link">Coș</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
+            <li><a href="cautare.html" class="navbar-link">Căutare</a></li>
+        </ul>
+    </nav>
 
-        <div class="hero">
-            <h1>Descoperă lumea alături de noi!</h1>
-            <p>Alege din cele mai bune pachete turistice și bucură-te de aventura vieții tale!</p>
-        </div>
-    </body>
-    </header>
-    <main>
-        <div class="container">
-            <h2>Destinații populare</h2>
+    <div class="hero">
+        <h1>Descoperă lumea alături de noi!</h1>
+        <p>Alege din cele mai bune pachete turistice și bucură-te de aventura vieții tale!</p>
+    </div>
+</body>
+</header>
+<main>
+    <div class="container">
+        <h2>Destinații populare</h2>
+        <div class="packages">
+            <div class="package">
+                <h3>Spania</h3>
+                <div class="image-container">
+                    <img src="images/Spania/1.jpg" alt="Spania package image">
+                </div>
+                <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
+                <p>Preț: 1200 Lei</p>
+                <form action="cos.php" method="post">
+                    <input type="hidden" name="nume" value="Pachet turistic Spania">
+                    <input type="hidden" name="pret" value="1200">
+                    <input type="number" name="cantitate" value="1" min="1">
+                    <button type="submit">Adaugă în coș</button>
+                </form>
+            </div>
+        <div class="packages">
+            <div class="package">
+                <h3>Grecia</h3>
+                <div class="image-container">
+                        <img src="images/Grecia/1.jpg" alt="Spania package image">
+                </div>
+                <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
+                <p>Preț: 1200 Lei</p>
+                <form action="cos.php" method="post">
+                    <input type="hidden" name="nume" value="Pachet turistic Spania">
+                    <input type="hidden" name="pret" value="1200">
+                    <input type="number" name="cantitate" value="1" min="1">
+                    <button type="submit">Adaugă în coș</button>
+                </form>
+            </div>
             <div class="packages">
                 <div class="package">
-                    <h3>Spania</h3>
+                    <h3>Austria</h3>
                     <div class="image-container">
-                        <img src="images/Spania/1.jpg" alt="Spania package image">
+                        <img src="images/Austria/1.jpg" alt="Spania package image">
                     </div>
                     <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
                     <p>Preț: 1200 Lei</p>
@@ -117,28 +147,13 @@
                         <input type="hidden" name="pret" value="1200">
                         <input type="number" name="cantitate" value="1" min="1">
                         <button type="submit">Adaugă în coș</button>
-                    </form>
-                </div>
-                <div class="packages">
-                    <div class="package">
-                        <h3>Grecia</h3>
-                        <div class="image-container">
-                            <img src="images/Grecia/1.jpg" alt="Spania package image">
-                        </div>
-                        <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
-                        <p>Preț: 1200 Lei</p>
-                        <form action="cos.php" method="post">
-                            <input type="hidden" name="nume" value="Pachet turistic Spania">
-                            <input type="hidden" name="pret" value="1200">
-                            <input type="number" name="cantitate" value="1" min="1">
-                            <button type="submit">Adaugă în coș</button>
-                        </form>
+                </form>
                     </div>
-                    <div class="packages">
+            <div class="packages">
                         <div class="package">
-                            <h3>Austria</h3>
+                            <h3>Spania</h3>
                             <div class="image-container">
-                                <img src="images/Austria/1.jpg" alt="Spania package image">
+                                <img src="images/Spania/1.jpg" alt="Spania package image">
                             </div>
                             <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
                             <p>Preț: 1200 Lei</p>
@@ -149,78 +164,63 @@
                                 <button type="submit">Adaugă în coș</button>
                             </form>
                         </div>
-                        <div class="packages">
-                            <div class="package">
-                                <h3>Spania</h3>
-                                <div class="image-container">
-                                    <img src="images/Spania/1.jpg" alt="Spania package image">
-                                </div>
-                                <p>Vizitează plajele însorite din Costa del Sol și descoperă istoria și cultura Spaniei într-un tur de 10 zile. Vizitează Barcelona, Madrid și Sevilla.</p>
-                                <p>Preț: 1200 Lei</p>
-                                <form action="cos.php" method="post">
-                                    <input type="hidden" name="nume" value="Pachet turistic Spania">
-                                    <input type="hidden" name="pret" value="1200">
-                                    <input type="number" name="cantitate" value="1" min="1">
-                                    <button type="submit">Adaugă în coș</button>
-                                </form>
-                            </div>
-                <div class="package">
-                    <h3>Italia</h3>
-                    <div class="image-container">
-                        <img src="images/Italia/1.jpg" alt="Italia package image">
-                    </div>
-                    <p>Descoperă farmecul Italiei într-un tur de 7 zile. Vizitează Roma, Veneția și Florența și bucură-te de gastronomia italiană.</p>
-                    <p>Preț: 1800 Euro</p>
-                    <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Pachet turistic Italia">
-                        <input type="hidden" name="pret" value="1800">
-                        <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
-                    </form>
+            <div class="package">
+                <h3>Italia</h3>
+                <div class="image-container">
+                    <img src="images/Italia/1.jpg" alt="Italia package image">
                 </div>
-                <div class="package">
-                    <h3>Franța</h3>
-                    <div class="image-container">
-                        <img src="images/Franta/1.jpg" alt="Franta package image">
-                    </div>
-                    <p>Vizitează romanticul oras Paris și regiunea sa, descoperă castelele din Valea Loarei și bucură-te de vinul și gastronomia franceză într-un tur de 10 zile.</p>
-                    <p>Preț: 2400 Euro</p>
-                    <form action="cos.php" method="post">
-                        <input type="hidden" name="nume" value="Pachet turistic Franța">
-                        <input type="hidden" name="pret" value="2400">
-                        <input type="number" name="cantitate" value="1" min="1">
-                        <button type="submit">Adaugă în coș</button>
-                    </form>
-                </div>
-                <div class="package">
-                    <h3>Egipt</h3>
-                <div class = "image-container">
-                    <img src="images/Egipt/1.jpg" alt="Egipt package image">
-                </div>
-                <p>Ai mereu dorit să vezi faimoasele piramide ale Egiptului? Acest pachet turistic de 7 zile te va duce într-o aventură prin Egipt, unde vei avea oportunitatea să explorezi nu numai piramidele, dar și muzeele și templele din Cairo și Luxor. De asemenea, vei avea oportunitatea să navighezi pe Nil și să vezi fauna sălbatică din Parcul Național Abu Simbel.</p>
-                <p>Preț: 2800 Euro</p>
+                <p>Descoperă farmecul Italiei într-un tur de 7 zile. Vizitează Roma, Veneția și Florența și bucură-te de gastronomia italiană.</p>
+                <p>Preț: 1800 Euro</p>
                 <form action="cos.php" method="post">
-                     <input type="hidden" name="nume" value="Pachet turistic Egipt">
-                     <input type="hidden" name="pret" value="2800">
-                     <input type="number" name="cantitate" value="1" min="1">
-                     <button type="submit">Adaugă în coș</button>
+                    <input type="hidden" name="nume" value="Pachet turistic Italia">
+                    <input type="hidden" name="pret" value="1800">
+                    <input type="number" name="cantitate" value="1" min="1">
+                    <button type="submit">Adaugă în coș</button>
                 </form>
+            </div>
+            <div class="package">
+                <h3>Franța</h3>
+                <div class="image-container">
+                    <img src="images/Franta/1.jpg" alt="Franta package image">
                 </div>
+                <p>Vizitează romanticul oras Paris și regiunea sa, descoperă castelele din Valea Loarei și bucură-te de vinul și gastronomia franceză într-un tur de 10 zile.</p>
+                <p>Preț: 2400 Euro</p>
+                <form action="cos.php" method="post">
+                    <input type="hidden" name="nume" value="Pachet turistic Franța">
+                    <input type="hidden" name="pret" value="2400">
+                    <input type="number" name="cantitate" value="1" min="1">
+                    <button type="submit">Adaugă în coș</button>
+                </form>
+            </div>
+            <div class="package">
+                <h3>Egipt</h3>
+            <div class = "image-container">
+                <img src="images/Egipt/1.jpg" alt="Egipt package image">
+            </div>
+            <p>Ai mereu dorit să vezi faimoasele piramide ale Egiptului? Acest pachet turistic de 7 zile te va duce într-o aventură prin Egipt, unde vei avea oportunitatea să explorezi nu numai piramidele, dar și muzeele și templele din Cairo și Luxor. De asemenea, vei avea oportunitatea să navighezi pe Nil și să vezi fauna sălbatică din Parcul Național Abu Simbel.</p>
+            <p>Preț: 2800 Euro</p>
+            <form action="cos.php" method="post">
+                    <input type="hidden" name="nume" value="Pachet turistic Egipt">
+                    <input type="hidden" name="pret" value="2800">
+                    <input type="number" name="cantitate" value="1" min="1">
+                    <button type="submit">Adaugă în coș</button>
+            </form>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="social-icons">
-            <a href="#"><img src="images/logo_facebook.png" alt="Facebook" width="50"></a>
-            <a href="#"><img src="images/logo_twiter.png" alt="Twitter" width="50"></a>
-            <a href="#"><img src="images/logo_instagram.png" alt="Instagram" width="50"></a>
-        </div>
-    
-        <div class="footer-info">
-            <p>Adresă: Strada ### nr. ###, Timisoara, România</p>
-            <p>Telefon: +40 123 456 789</p>
-            <p>Email: contact@m&btravel.ro</p>
-            <p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
-        </div>
-    </footer>
+    </div>
+</main>
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="images/logo_facebook.png" alt="Facebook" width="50"></a>
+        <a href="#"><img src="images/logo_twiter.png" alt="Twitter" width="50"></a>
+        <a href="#"><img src="images/logo_instagram.png" alt="Instagram" width="50"></a>
+    </div>
+
+    <div class="footer-info">
+        <p>Adresă: Strada ### nr. ###, Timisoara, România</p>
+        <p>Telefon: +40 123 456 789</p>
+        <p>Email: contact@m&btravel.ro</p>
+        <p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
+    </div>
+</footer>
 </html>
